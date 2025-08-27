@@ -1,0 +1,82 @@
+/* --- Homepage General Styles --- */
+.homepage-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding: 2rem;
+    background-color: #f0f2f5;
+}
+
+/* --- Hero Section --- */
+.hero-section {
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 3rem;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #333;
+}
+
+.hero-subtitle {
+    font-size: 1.25rem;
+    color: #666;
+}
+
+/* --- Card Container --- */
+.card-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    width: 100%;
+    max-width: 1000px;
+    flex-wrap: wrap;
+    /* Allows cards to stack on smaller screens */
+}
+
+/* --- Management Card Base Styles --- */
+.management-card {
+    background-color: white;
+    border-radius: 1rem;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+    color: inherit;
+    width: 100%;
+    max-width: 400px;
+}
+
+.management-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.card-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.card-title {
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.card-description {
+    color: #555;
+    margin-bottom: 1.5rem;
+}
+
+/* --- Specific Card Colors --- */
+.student-card .card-icon {
+    color: #667eea;
+}
+
+.employee-card .card-icon {
+    color: #38b2ac;
+}
