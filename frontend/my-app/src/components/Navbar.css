@@ -1,0 +1,43 @@
+/* Navbar.css */
+
+.navbar-glass {
+    background: rgba(102, 126, 234, 0.7);
+    /* bluish gradient glass */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.2);
+    /* padding: 1rem 0; */
+    min-height: 10vh;
+    padding: 1rem 0;
+    /* Increased vertical padding for more height */
+}
+
+.navbar-glass .navbar-brand,
+.navbar-glass .nav-link {
+    color: #fff !important;
+}
+
+
+/* Style for the active navigation link */
+.nav-link.active {
+    font-weight: bold;
+    color: #ffffff !important;
+    /* Make active link color stand out */
+}
+
+/* Gradient style for the navigation button */
+.btn-gradient {
+    background-image: linear-gradient(to right, #667eea 0%, #764ba2 51%, #667eea 100%);
+    background-size: 200% auto;
+    color: white;
+    border: none;
+    transition: 0.5s;
+}
+
+.btn-gradient:hover {
+    background-position: right center;
+    /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+}

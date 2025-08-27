@@ -1,23 +1,48 @@
+/* --- Global Variables --- */
+/* Centralize theme values for easy updates. */
+:root {
+  --padding-md: 1.5em;
+  --padding-lg: 2em;
+  --logo-height: 6em;
+
+  /* Colors */
+  --color-text-muted: #888;
+  --color-glow-primary: #646cffaa;
+  --color-glow-react: #61dafbaa;
+
+  /* Animation */
+  --animation-speed-slow: 20s;
+}
+
+/* --- App Layout (CORRECTED) --- */
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+  /* This ensures the container spans the full browser width. */
+    max-width: 100%;
+    width: 100%;
+  
+    /* Removing horizontal padding to prevent side margins. */
+    padding: var(--padding-lg) 0;
   text-align: center;
 }
 
+/* --- Logo & Animation --- */
 .logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+  height: var(--logo-height);
+    padding: var(--padding-md);
+    will-change: filter;
+    /* Performance boost for animations */
+    transition: filter 300ms ease-in-out;
 }
 
+.logo:hover {
+  filter: drop-shadow(0 0 2em var(--color-glow-primary));
+}
+
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em var(--color-glow-react));
+}
+
+/* Spinning animation for the second logo */
 @keyframes logo-spin {
   from {
     transform: rotate(0deg);
@@ -27,16 +52,18 @@
   }
 }
 
+/* Accessibility: Respect user's motion preferences. */
 @media (prefers-reduced-motion: no-preference) {
   a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+    animation: logo-spin infinite var(--animation-speed-slow) linear;
   }
 }
 
+/* --- Component Styles --- */
 .card {
-  padding: 2em;
+  padding: var(--padding-lg);
 }
 
 .read-the-docs {
-  color: #888;
+  color: var(--color-text-muted);
 }
